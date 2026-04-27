@@ -1,6 +1,6 @@
-# 🔧 Automação de Deploy Windows 11 (Sysprep + DISM + Unattend)
+#  Automação de Deploy Windows 11 (Sysprep + DISM + Unattend)
 
-## 📌 Visão Geral
+##  Visão Geral
 
 Este projeto demonstra a criação de uma imagem customizada do Windows 11 e a automação completa do processo de instalação utilizando:
 
@@ -13,7 +13,7 @@ O objetivo é simular um processo de **deploy corporativo**, reduzindo interven�
 
 ---
 
-## 🎯 Objetivos
+##  Objetivos
 
 * Automatizar a instalação do Windows 11
 * Padronizar configurações do sistema
@@ -22,9 +22,9 @@ O objetivo é simular um processo de **deploy corporativo**, reduzindo interven�
 
 ---
 
-## ⚙️ Processo Técnico
+##  Processo Técnico
 
-### 🔹 1. Preparação do Sistema
+###  1. Preparação do Sistema
 
 * Instalação limpa do Windows 11
 * Entrada em Audit Mode assim que ingressar na tela inicial de configuração do Windows 11.
@@ -41,7 +41,7 @@ O objetivo é simular um processo de **deploy corporativo**, reduzindo interven�
 
 ---
 
-### 🔹 2. Sysprep
+###  2. Sysprep
 
 Execução do Sysprep.
 Ele se encontra em C:\Windows\System32\Sysprep
@@ -52,7 +52,7 @@ Ele se encontra em C:\Windows\System32\Sysprep
 
 ---
 
-### 🔹 3. Captura da Imagem
+###  3. Captura da Imagem
 
 Captura realizada via DISM.
 Realizar boot via pendrive com WindowsRE para manter o disco em estado offline.
@@ -63,7 +63,7 @@ dism /capture-image /imagefile:D:\install.wim /capturedir:C:\ /name:"Windows-11-
 
 ---
 
-### 🔹 4. Criação do Pendrive Bootável
+###  4. Criação do Pendrive Bootável
 
 * Criação de mídia bootável via Rufus.
 * Substituição do arquivo:
@@ -76,7 +76,7 @@ dism /capture-image /imagefile:D:\install.wim /capturedir:C:\ /name:"Windows-11-
 
 ---
 
-### 🔹 5. Automação com Unattend.xml
+###  5. Automação com Unattend.xml
 
 * Geração do arquivo `autounattend.xml`
 * Inserir XML na pasta raiz do pendrive
@@ -90,16 +90,16 @@ dism /capture-image /imagefile:D:\install.wim /capturedir:C:\ /name:"Windows-11-
 
 ---
 
-## 🐛 Problemas Encontrados e Soluções
+##  Problemas Encontrados e Soluções
 
-### ❌ Erro 80 no DISM
+###  Erro 80 no DISM
 
 * **Causa:** uso de parâmetros como `/compress:max`
 * **Solução:** captura sem compressão e export posterior
 
 ---
 
-### ❌ Sysprep incorreto
+###  Sysprep incorreto
 
 * **Causa:** Campo "Generalizar" não marcado
 * **Impacto:** imagem inválida para deploy
@@ -107,21 +107,21 @@ dism /capture-image /imagefile:D:\install.wim /capturedir:C:\ /name:"Windows-11-
 
 ---
 
-### ❌ autounattend.xml ignorado
+###  autounattend.xml ignorado
 
 * **Causa:** XML incompleto ou inválido
 * **Solução:** uso de gerador confiável + estrutura correta
 
 ---
 
-### ❌ Exigência de conexão com internet (Windows 11)
+###  Exigência de conexão com internet (Windows 11)
 
 * **Causa:** NRO (Network Requirement OOBE)
 * **Solução:** bypass via configuração automatizada no autounattend.xml
 
 ---
 
-## 🚀 Resultados
+##  Resultados
 
 * Instalação 100% automatizada
 * Redução significativa de tempo
@@ -130,7 +130,7 @@ dism /capture-image /imagefile:D:\install.wim /capturedir:C:\ /name:"Windows-11-
 
 ---
 
-## 🔮 Próximos Passos
+##  Próximos Passos
 
 * Integração automática com Active Directory
 * Renomear computador com padrão (ex: PC-001, PC-002, etc...)
@@ -139,13 +139,13 @@ dism /capture-image /imagefile:D:\install.wim /capturedir:C:\ /name:"Windows-11-
 
 ---
 
-## 🧠 Conclusão
+##  Conclusão
 
 Este projeto demonstra na prática o processo de criação e automação de imagens Windows em um cenário próximo ao ambiente corporativo, incluindo troubleshooting real e resolução de problemas comuns em deploy.
 
 ---
 
-## 📎 Autor
+##  Autor
 
 Projeto desenvolvido por Igor Eloy Kloch Correa
 
