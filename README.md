@@ -74,6 +74,8 @@ dism /capture-image /imagefile:D:\install.wim /capturedir:C:\ /name:"Windows-11-
 
 ###  5. Automação com Unattend.xml
 
+<img width="1919" height="914" alt="autounattend" src="https://github.com/user-attachments/assets/8b863555-eb76-4438-a75d-1abdcdf8366f" />
+
 * Geração do arquivo `autounattend.xml`
 * Inserir XML na pasta raiz do pendrive
 * Aplicação automática durante instalação
