@@ -1,4 +1,4 @@
-#  Automação de Deploy Windows 11 (Sysprep + DISM + Unattend)
+#  Automação de Deploy Windows 11 (Sysprep + DISM + autounattend.xml)
 
 ##  Visão Geral
 
@@ -6,7 +6,7 @@ Este projeto demonstra a criação de uma imagem customizada do Windows 11 e a a
 
 * Sysprep
 * DISM
-* Unattend.xml
+* Autonattend.xml
 * Scripts PowerShell
 
 O objetivo é simular um processo de **deploy corporativo**, reduzindo intervenção manual e padronizando estações de trabalho.
@@ -72,7 +72,7 @@ dism /capture-image /imagefile:D:\install.wim /capturedir:C:\ /name:"Windows-11-
 
 ---
 
-###  5. Automação com Unattend.xml
+###  5. Automação com autounattend.xml
 
 <img width="1919" height="914" alt="autounattend" src="https://github.com/user-attachments/assets/8b863555-eb76-4438-a75d-1abdcdf8366f" />
 
@@ -105,7 +105,7 @@ dism /capture-image /imagefile:D:\install.wim /capturedir:C:\ /name:"Windows-11-
 
 ---
 
-###  autounattend.xml ignorado
+###  Autounattend.xml ignorado
 
 * **Causa:** XML incompleto ou inválido
 * **Solução:** uso de gerador confiável + estrutura correta
