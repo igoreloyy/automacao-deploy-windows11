@@ -65,10 +65,9 @@ dism /capture-image /imagefile:D:\install.wim /capturedir:C:\ /name:"Windows-11-
 
 * Criação de mídia bootável via Rufus.
 * Substituição do arquivo:
+    sources\install.wim
 
   <img width="1118" height="626" alt="image" src="https://github.com/user-attachments/assets/c364cbce-2653-4ec5-bd05-781aafd33a83" />
-
-  sources\install.wim
 
 ---
 
